@@ -72,7 +72,6 @@ class Reverse_palindrome_Armstrong_Divisor_Prime {
     }
 
     public int greatestCommonFactor(int a , int b) {
-
         int gcf = 0;
         while (a>0 && b>0) {
             if (a>b) a = a%b;

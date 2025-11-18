@@ -23,7 +23,7 @@ public class NodeCreation {
 
         // Let's assume our LL is empty so our head is empty
         if (head == null) {
-            head = tail = newNode;      // I created a new node and if head is empty then i create a new node which has same tail then head point to it
+            head = tail = newNode;      // I created a new node and if head is empty then I create a new node which has same tail then head point to it
             return;
         }
 

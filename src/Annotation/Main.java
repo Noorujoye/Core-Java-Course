@@ -41,7 +41,7 @@ public class Main {
         // by using Lamba function "->" we can reduce code size
         // if any parameter comes put it in btw circlur ()
         // even u can just write i if single parameter is there
-        // so is conclude that Lamb expression is only work
+        // so it conclude that Lamb expression is only work
         // when there is functionalInterface (a interface with one method)
         I i = (x,y) -> System.out.println("Interface I" + x +" "+ y);
         i.show(10,20);

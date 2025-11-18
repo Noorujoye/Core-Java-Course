@@ -87,7 +87,10 @@ public class CopyOnWriteArrayListMain {
 //        CopyOnWriteArrayList<Integer> list = new CopyOnWriteArrayList<>();
 
 
-        //List<String> shoppingList = new CopyOnWriteArrayList<>(); // this will give error because arraylist cant be modified at the time of iteration
+        //List<String> shoppingList = new CopyOnWriteArrayList<>();
+        // this will give error because arraylist
+        // cant be modified at the time of iteration
+
         List<String> shoppingList = new CopyOnWriteArrayList<>();
 
         shoppingList.add("milk");
