@@ -50,6 +50,5 @@ public class Main {
         J j = (x,y) -> (x+y);
         int result = j.show(10,20);
         System.out.println(result);
-
     }
 }

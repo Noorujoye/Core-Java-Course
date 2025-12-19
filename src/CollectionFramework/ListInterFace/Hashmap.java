@@ -82,11 +82,10 @@ public class Hashmap {
         System.out.println("LinkedHashMap (Insertion Order): " + linkedHashMap);
 
         //ConcurrentHashMap - thread safe
-
         Map<Integer,String> concurrentMap = new java.util.concurrent.ConcurrentHashMap<>();
-        concurrentMap .put(2,"Two");
-        concurrentMap .put(1,"one");
-        concurrentMap .put(3,"Three");
+        concurrentMap.put(2,"Two");
+        concurrentMap.put(1,"one");
+        concurrentMap.put(3,"Three");
         System.out.println("concurrentMap : " + concurrentMap);
 
         // class Generics
@@ -110,14 +109,12 @@ public class Hashmap {
                 .forEach(entry -> System.out.println(entry.getKey()+" -> " + entry.getValue()));
 
         //Sorted by values
-
         map.entrySet().stream()
                 .sorted(Map.Entry.comparingByValue())
                 .forEach(entry -> System.out.println(entry.getKey() + " -> " + entry.getValue()));
                  //Sorting helps when generating reports, ranking, or displaying structured information.
 
         //Stream with Maps
-
         //Streams allow filtering, mapping, and collecting results from maps easily.
 
         Map<Integer,String> result = map.entrySet().stream()
@@ -135,6 +132,6 @@ public class Hashmap {
         for (String word : words) {
             freqMap.put(word, freqMap.getOrDefault(word,0) + 1);
         }
-        System.out.println("Word Frequences : " + freqMap);
+        System.out.println("Word Frequencies : " + freqMap);
     }
 }

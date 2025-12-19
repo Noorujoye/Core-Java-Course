@@ -11,7 +11,8 @@ import java.lang.Runnable;
 
  @FunctionalInterface
  interface MathOperation {
-     int operate(int a, int b); //jo bhi class MathOperation implement karegi, usko operate method likhna hi padega."
+     int operate(int a, int b);
+     //jo bhi class MathOperation implement karegi, usko operate method likhna hi padega."
  }
  class sumOperation implements MathOperation {
      public int operate(int a , int b) {
@@ -28,11 +29,6 @@ import java.lang.Runnable;
          return a-b;
      }
  }
-
-
-
-
-
 
  public class Basic {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Arrays;
+package DSA.Arrays;
 
 import java.util.Scanner;
 
@@ -22,12 +22,7 @@ public class Main {
                     arr[i][j][m] = sc.nextInt();
                 }
         }
-        for (int i=0; i<arr.length; i++) {
-            for (int[] c : arr[i]) {
-                System.out.print(c + " ");
-            }
-            System.out.println();
-        }
+
 
         int new_arr[][] = new int[2][2]; //jagged array
         for (int i=0; i< new_arr.length; i++) {
@@ -38,5 +33,8 @@ public class Main {
             }
             System.out.println();
         }
+
+        int[][][] arrr = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}};
+        System.out.println(arrr[1][0][0]);
     }
 }

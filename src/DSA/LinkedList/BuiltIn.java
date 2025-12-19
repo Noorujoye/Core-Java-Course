@@ -9,9 +9,9 @@ public class BuiltIn {
         nums.add(5);
         nums.add(9);
 
-//        nums.addFirst(6); // 6 will go at start
+//      nums.addFirst(6); // 6 will go at start
 
-        //nums.peek();this will give u head element of linkedlist
+        //nums.peek();this will give u head element of linkedList
         System.out.println(nums.peek());
         System.out.println(nums.get(2));
         System.out.println(nums);

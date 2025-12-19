@@ -13,10 +13,10 @@ class Employee {
     int age;
     int salary;
     Employee(String n , String d , int a , int b) {
-        name=n;
-        dept=d;
-        age=a;
-        salary=b;
+        this.name=n;
+        this.dept=d;
+        this.age=a;
+        this.salary=b;
     }
 }
 
@@ -53,7 +53,7 @@ public class StreamByGpt {
         System.out.println();
 
         Stream<String> s = Stream.of("A", "B", "C");
-        System.out.println(s);
+        System.out.println();
 
         List<Employee> emps = List.of(
                 new Employee("Aman","IT",25,60000),

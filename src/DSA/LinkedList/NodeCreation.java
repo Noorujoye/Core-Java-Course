@@ -1,5 +1,4 @@
 package DSA.LinkedList;
-import java.util.LinkedList;
 
 public class NodeCreation {
     public static class Node {
@@ -43,7 +42,7 @@ public class NodeCreation {
             head = tail = newNode;
             return;
         }
-        // step 2: new node ko link krdo tail se kyuki tail kast node ko point krta h
+        // step 2: new node ko link krdo tail se kyuki tail last node ko point krta h
         tail.next = newNode;
         // step 3: tail ko update kro
         tail = newNode;

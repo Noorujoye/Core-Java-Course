@@ -1,3 +1,5 @@
+package Thread;
+
 import java.lang.Runnable;
 class FibonacciTask implements Runnable {
     private int n;

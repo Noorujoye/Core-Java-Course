@@ -10,5 +10,14 @@ Internal working of HashMap Insertion
 
 step 1: Generate HashCode
 step 2: Calculate Index = hashcode % arraySize
-step 3: Storing in the Bucket , key value pair is stored in th ebucket at the calculated index . each bucket can hold multiple key value pairs
+step 3: Storing in the Bucket , key value pair is stored in the bucket at the calculated index . each bucket can hold multiple key value pairs
 (this called collision handling mechanism)
+
+Internal steps:
+Step 1: hashCode calculation
+int hash = key.hashCode();
+
+Step 2: index calculation
+index = hash & (n - 1);
+
+(n = array size, default = 16)

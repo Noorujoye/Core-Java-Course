@@ -1,7 +1,9 @@
+package Thread;
 
 class Counter {
     private int count = 0;
-    public synchronized void increment() { // increament marked as synchronized means on thread can execute this method at a time
+    public synchronized void increment() {
+        // increment marked as synchronized means on thread can execute this method at a time
         //without synchronized two threads might read the same value and overwrite each other -> RaceCondition
         count++;
         System.out.println(count); // critical section
