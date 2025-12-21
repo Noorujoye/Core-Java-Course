@@ -1,6 +1,5 @@
 package CollectionFramework.ListInterFace;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -104,7 +103,7 @@ public class CopyOnWriteArrayListMain {
 
             if (item.equals("butter")) {
                 shoppingList.add("Cheese");
-                System.out.println("Added butter while reading...");
+                System.out.println("Added cheese while reading...");
             }
         }
         System.out.println("updated shoppingList : " + shoppingList);
@@ -171,7 +170,5 @@ public class CopyOnWriteArrayListMain {
         });
         reader.start();
         writer.start();
-
-
     }
 }

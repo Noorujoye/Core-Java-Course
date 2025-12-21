@@ -209,7 +209,9 @@ public class ArrayListClass {
         for (int num : i) {
             lNum.add(num);
         }
-        List<Integer> num = Arrays.stream(i).boxed().collect(Collectors.toList());
+        List<Integer> num = Arrays.stream(i)
+                .boxed().
+                collect(Collectors.toList());
         System.out.println(num);
 
 

@@ -8,6 +8,10 @@ public class BuiltIn {
         LinkedList nums = new LinkedList();
         nums.add(5);
         nums.add(9);
+        nums.reversed();
+//        System.out.println("");
+
+        System.out.println(nums);
 
 //      nums.addFirst(6); // 6 will go at start
 
