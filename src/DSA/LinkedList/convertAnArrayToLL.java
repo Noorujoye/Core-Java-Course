@@ -27,11 +27,15 @@ public class convertAnArrayToLL {
         Node head = convertArr2LL(arr);
         System.out.println(head.data);
         Node temp = head;
+        int size = 0;
         while (temp != null) {
+            size++;
             System.out.print(temp.data);
             if (temp.next != null)
                 System.out.print(" -> ");
             temp = temp.next;
         }
+
+        System.out.println("\n" + size);
     }
 }
