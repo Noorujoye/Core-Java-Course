@@ -12,11 +12,12 @@ class Employee {
     String dept;
     int age;
     int salary;
-    Employee(String n , String d , int a , int b) {
-        this.name=n;
-        this.dept=d;
-        this.age=a;
-        this.salary=b;
+
+    Employee(String n, String d, int a, int b) {
+        this.name = n;
+        this.dept = d;
+        this.age = a;
+        this.salary = b;
     }
 }
 
@@ -56,11 +57,11 @@ public class StreamByGpt {
         System.out.println();
 
         List<Employee> emps = List.of(
-                new Employee("Aman","IT",25,60000),
-                new Employee("Rohit","HR",30,50000),
-                new Employee("Neha","IT",29,80000),
-                new Employee("Sara","IT",21,40000),
-                new Employee("Arjun","IT",26,55000)
+                new Employee("Aman", "IT", 25, 60000),
+                new Employee("Rohit", "HR", 30, 50000),
+                new Employee("Neha", "IT", 29, 80000),
+                new Employee("Sara", "IT", 21, 40000),
+                new Employee("Arjun", "IT", 26, 55000)
         );
 
         List<String> res =
@@ -107,12 +108,13 @@ public class StreamByGpt {
 
         int maxPrice =
                 products.stream()
-                        .map(p -> p.price)
+                        .map(p -> {
+                            return p.price;
+                        })
                         .filter(Optional::isPresent)
                         .map(Optional::get)
                         .mapToInt(Integer::intValue)
                         .max()
                         .orElse(0);
-
     }
 }

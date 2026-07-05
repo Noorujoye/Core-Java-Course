@@ -1,4 +1,4 @@
-🔑 Thread creation ke concepts in Java
+Thread creation ke concepts in Java
 
 Java me thread banane ke 3 main tareeke hote hain:
 

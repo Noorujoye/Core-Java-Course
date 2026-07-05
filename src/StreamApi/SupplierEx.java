@@ -1,6 +1,5 @@
 package StreamApi;
 
-import javax.naming.InsufficientResourcesException;
 import java.util.function.*;
 
 public class SupplierEx {
@@ -20,9 +19,9 @@ public class SupplierEx {
             consumer.accept(function.apply(supplier.get()));
         }
 
-        //biPredicatw , BiConsumer , BiFunction
+        //biPredicate , BiConsumer , BiFunction
 
-        BiPredicate <Integer ,Integer> isSumEven = (x,y) -> (x+y) % 2 == 0;
+        BiPredicate <Integer,Integer> isSumEven = (x, y) -> ( x + y ) % 2 == 0;
         System.out.println(isSumEven.test(10,20));
         BiConsumer<Integer,String> biConsumer = (x,y) -> {
             System.out.println(y);
@@ -31,8 +30,11 @@ public class SupplierEx {
         BiFunction<String,String,Integer> biFunction = (x,y) -> (x+y).length();
         System.out.println(biFunction.apply("a","bc"));
 
-//        UnaryOperator=Funct , BinaryOperator=BiFun
+//        UnaryOperator=Funct , no need to write twice , which type of value it stores and return
+//        BinaryOperator=BiFun
         UnaryOperator<Integer> a = x -> 2*x;
+
+
         BinaryOperator<Integer> b = (x,y) -> x+y;
 
     }

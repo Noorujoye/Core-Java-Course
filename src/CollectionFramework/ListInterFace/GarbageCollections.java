@@ -19,7 +19,9 @@ class Phone {
                 '}';
     }
 }
+
 public class GarbageCollections {
+
     public static void main(String[] args) {
 
         //strong refernce
@@ -29,7 +31,7 @@ public class GarbageCollections {
 //        System.out.println(phone);
 
         //weak reference
-        WeakReference<Phone> phoneWeakReference = new WeakReference<>(new Phone("Apple","15 pro max"));
+        WeakReference<Phone> phoneWeakReference = new WeakReference<>(new Phone("Apple", "15 pro max"));
         System.out.println(phoneWeakReference.get());
         System.gc();
 

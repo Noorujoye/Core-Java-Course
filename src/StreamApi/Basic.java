@@ -8,7 +8,12 @@ import java.lang.Runnable;
 //        System.out.println("Hello");
 //    }
 //}
-
+class noorain extends Thread {
+    @Override
+    public void run() {
+        System.out.println("Hello");
+    }
+}
  @FunctionalInterface
  interface MathOperation {
      int operate(int a, int b);
@@ -33,12 +38,13 @@ import java.lang.Runnable;
  public class Basic {
     public static void main(String[] args) {
         //Lambda expression
-        //lanbda expression is an anonymous function (no name, no return type, no modifier)
-        //lambda expression is used to implement functional interface(it has only one absract method)
+        //lambda expression is an anonymous function (no name, no return type, no modifier)
+        //lambda expression is used to implement functional interface(it has only one abstract method)
 
         Thread t1 = new Thread(() -> {
                System.out.println("Hello");
         });
+//        Thread t1 = new Thread(new noorain());
         t1.start();
 
         MathOperation op = new sumOperation();

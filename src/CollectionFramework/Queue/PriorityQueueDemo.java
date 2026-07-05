@@ -28,7 +28,7 @@ public class PriorityQueueDemo {
         System.out.println("according to the priority: which is the smallest wil get printed :  " + pq.peek());
         System.out.println("remove the first one: which is the smallest among all : " + pq.poll());
 
-        // now the top will always be the largest because of customize comaparator
+        // now the top will always be the largest because of customize comparator
         PriorityQueue<Integer> pq1 = new PriorityQueue<>(Comparator.reverseOrder());
 
         pq1.offer(40);

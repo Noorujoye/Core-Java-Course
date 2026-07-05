@@ -1,15 +1,22 @@
 package Projects.InMemoryUserManagementSystem.ChatMessageSystem;
 
-public class Producer implements Runnable{
 
+import java.util.concurrent.BlockingQueue;
 
-    public Producer(Message message) {
-        
+public class MessageProducer{
+    private final BlockingQueue<Message> queue;
+
+    public MessageProducer(BlockingQueue<Message> queue) {
+        this.queue = queue;
     }
 
-    @Override
-    public void run() {
+    public void produce(Message message) {
+        try {
+            queue.put(message); // thread safe , blocks if needed
+            System.out.println("messaged queue: " + message.getContent());
 
-
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 }

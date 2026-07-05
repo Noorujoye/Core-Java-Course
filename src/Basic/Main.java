@@ -1,6 +1,5 @@
 package Basic;
 
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
@@ -11,48 +10,58 @@ public class Main {
     int age = 20; //instance variable
     String name = "Noor"; //instance variable
 
-     private static String city = "Indore"; //static member or variables
+    private static String city = "Indore"; //static member or variables
     //when the class loads this city is immediately available , and others like static blocks and main method
+
+    static {
+        System.out.println("Noorain");
+    }
 
     public Main() {
 
     }
-    public Main(int age , String n) {
+
+    public Main(int age, String n) {
         System.out.println("Constructor");
-        this.age=10;
-        this.name="Noorain";
-        System.out.printf("My age is %d  years: ",age);
+        this.age = 10;
+        this.name = "Noorain";
+        System.out.printf("My age is %d  years: ", age);
     }
 
-     void sayHello() { //instance method
-                       // This means it belongs to an object (an instance of the Main class).
+    void sayHello() { //instance method
+        // This means it belongs to an object (an instance of the Main class).
         System.out.println("Hello from instance method");
         System.out.println(city);
 
 
     }
+
     static void say() { //static method
         System.out.println("Hello from static method");
         System.out.println(city); // u can use static members or variables
 //        System.out.println(age); u can use instance variable in static method because it belongs to class
     }
+
     static void say(String n) {
-         System.out.println("Hello from static method with one parameter");
-         System.out.println("parameter is : " + n);
+        System.out.println("Hello from static method with one parameter");
+        System.out.println("parameter is : " + n);
     }
-     static int counter = 11;
-    static {
-       System.out.println("static block");
-       System.out.println(city); // it will work
-//        System.out.println(age); it will no work
-    }
+
+//    static int counter = 11;
+
+//    static {
+//        System.out.println("static block");
+//        System.out.println(city); // it will work
+
+    /// /        System.out.println(age); it will no work
+//    }
     public static void main(String[] args) { //static method
 
-        System.out.println(++counter);
+//        System.out.println(++counter);
         Main m = new Main(); // An object 'm' is created. It now has its own 'age' and 'name'.
-        Main m1 = new Main(100,"Virat");
+        Main m1 = new Main(100, "Virat");
         m.sayHello(); // m is instance of Main,
-                     // To call an instance method, you need an object of the class.
+        // To call an instance method, you need an object of the class.
 
         say("C:\"\\Noorain\\\""); // u can directly call like this because u r in the class
         Main.say("Noorain"); // or u can call static method like this also
@@ -61,9 +70,9 @@ public class Main {
         singletonInstance.sameInstance();
 
         //if I will call it again  I will get the same object
-   System.out.println();
+        System.out.println();
         try {
-            RandomAccessFile ref = new RandomAccessFile("D:\\JAVA\\CORE-JAVA-5\\src\\Basic\\dsaInterView.pdf" , "r");
+            RandomAccessFile ref = new RandomAccessFile("D:\\JAVA\\CORE-JAVA-5\\src\\Basic\\dsaInterView.pdf", "r");
             ref.seek(1000);
             String line = ref.readLine();
             System.out.println(line);

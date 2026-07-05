@@ -1,15 +1,25 @@
 package StreamApi;
 
-import java.sql.Struct;
 import java.util.function.Predicate;
 
 public class PredicateEx {
+    public Boolean isEven(int x) {
+        return x % 2 == 0;
+    }
+
     public static void main(String[] args) {
 
+
         //Predicate  --> Functional interface
-        //storing a condition in variable
-        Predicate <Integer> isEven = x-> x % 2 == 0;
-        System.out.println(isEven.test(4));
+        //storing a condition in variable , a boolean type
+/*
+        PredicateEx p = new PredicateEx();
+        boolean ans = p.isEven(10);
+        System.out.println(ans);
+        this is two long like create method then object the call using method and print
+ */
+        Predicate<Integer> isEven = x -> x % 2 == 0;
+        System.out.println(isEven.test(10));
 
         Predicate<String> isWordStartsWithN = x -> x.startsWith("N");
         System.out.println(isWordStartsWithN.test("Noorain"));

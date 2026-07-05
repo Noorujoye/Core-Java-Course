@@ -8,7 +8,7 @@ public class ConsumerEx {
     public static void main(String[] args) {
 
         //Consumer -> it will consume
-        //no return type thats why no compose method here
+        //no return type that's why no compose method here
         Consumer<Integer> x = a -> System.out.println(a);
         x.accept(50);
 
